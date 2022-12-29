@@ -39,13 +39,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'ULAM',
-                  style: TextStyle(
-                      color: Colors.red,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
+                child: Image.asset('assets/images/ulam_logo.jpeg', height: 100,width:200),),
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
