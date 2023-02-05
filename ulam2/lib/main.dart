@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ulam2/screens/SignUpScreen.dart';
+import 'package:ulam2/screens/GoogleMapsScreen.dart';
+import 'package:ulam2/screens/HomeScreen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -45,10 +48,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                 padding: const EdgeInsets.all(10),
                 child: const Text(
                   'Log in',
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20, color: Colors.red, fontWeight: FontWeight.bold),
                 )),
             Container(
-              padding: const EdgeInsets.all(10),
+              height: 60,
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
                 controller: nameController,
                 decoration: const InputDecoration(
@@ -58,6 +62,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               ),
             ),
             Container(
+              height: 60,
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
               child: TextField(
                 obscureText: true,
@@ -75,8 +80,8 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
               child: const Text('Forgot Password', style: TextStyle(color: Colors.red),),
             ),
             Container(
-                height: 50,
-                padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                height: 60,
+                padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                 child: ElevatedButton(
                   child: const Text('Login'),
                   style: ElevatedButton.styleFrom(
@@ -98,12 +103,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   ),
                   onPressed: () {
                     //signup screen
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context)=>HomeScreen(),)
+                    );
                   },
                 )
               ],
               mainAxisAlignment: MainAxisAlignment.center,
             ),
           ],
-        ));
+        )
+    );
   }
 }
