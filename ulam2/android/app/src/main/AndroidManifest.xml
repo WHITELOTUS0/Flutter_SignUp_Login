@@ -5,12 +5,12 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:label="ulam2"
+        android:label="ULAM"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
 
        <meta-data android:name="com.google.android.geo.API_KEY"
-           android:value=""/>
+           android:value="GOOGLE MAPS API"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

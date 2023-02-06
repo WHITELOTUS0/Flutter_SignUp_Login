@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ulam2/screens/SignUpScreen.dart';
 import 'package:ulam2/screens/GoogleMapsScreen.dart';
 import 'package:ulam2/screens/HomeScreen.dart';
+import 'package:ulam2/screens/chat_screen.dart';
 
 void main() => runApp(const MyApp());
 
@@ -90,6 +91,11 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context)=>HomeScreen(),)
+                    );
+
                   },
                 ),
             ),
@@ -105,7 +111,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                     //signup screen
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context)=>HomeScreen(),)
+                      MaterialPageRoute(builder: (context)=>SignUpScreen(),)
                     );
                   },
                 )

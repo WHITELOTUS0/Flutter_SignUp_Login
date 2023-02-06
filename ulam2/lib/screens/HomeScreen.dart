@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ulam2/screens/GoogleMapsScreen.dart';
+import 'package:ulam2/screens/MoreScreen.dart';
+import 'package:ulam2/screens/chat_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -18,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
       size: 150,
     ),
     Icon(
-      Icons.account_box,
+      Icons.more_horiz,
       size: 150,
     ),
     Icon(
@@ -66,8 +68,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: 'Land',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_box),
-            label: 'Account',
+            icon: Icon(Icons.more_horiz),
+            label: 'More',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.map),
@@ -82,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     );
   }
-  int _selectedIndex = 1;
+  int _selectedIndex = 0;
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
@@ -90,6 +92,9 @@ class _HomeScreenState extends State<HomeScreen> {
     if(index==2) {
       Navigator.of(context).pushReplacement(
           new MaterialPageRoute(builder: (context) => new SimpleMap()));
+    }else if(index==1){
+      Navigator.of(context).pushReplacement(
+          new MaterialPageRoute(builder: (context) => new MoreScreen()));
     }
 
   }
