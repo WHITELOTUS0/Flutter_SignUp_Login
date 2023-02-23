@@ -4,6 +4,8 @@ import 'package:ulam2/screens/AccountScreen.dart';
 import 'package:ulam2/screens/HomeScreen.dart';
 import 'package:ulam2/screens/chat_screen.dart';
 
+import 'TipsScreen.dart';
+
 class MoreScreen extends StatefulWidget {
   const MoreScreen({super.key});
 
@@ -55,6 +57,20 @@ class _MoreScreenState extends State<MoreScreen> {
     );
     },
     ),
+            ListTile(
+              title: Text("Tips and Resources"),
+              leading: Icon(Icons.tips_and_updates ),
+              trailing: Icon(Icons.chevron_right),
+              subtitle:Text("Selling/Buying..."),
+              onTap: (){
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Tips(),
+                  ),
+                );
+              },
+            ),
     ]
     )
 
