@@ -1,3 +1,23 @@
+# How it looks like
+
+### Includes Google Maps and ChatGpt Api
+
+![App in phone page](assets/images/Phone.jpg)
+
+![Home page](assets/images/Home.jpg)
+
+![SignUp page](assets/images/SignUp.jpg)
+
+![Search](assets/images/search.jpg)
+
+![Maps](assets/images/Maps.jpg)
+
+![More](assets/images/More.jpg)
+
+![ChatGpt](assets/images/ChatGPT2.jpg)
+
+![Tips](assets/images/Tips.jpg)
+
 # ulam2
 
 A new Flutter project.
